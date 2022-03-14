@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'groovy'
+    id 'idea'
+    id 'org.springframework.cloud.contract' version '3.1.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+ext {
+    springCloudVersion = '2021.0.0'                                 // spring cloud version (Spring Boot 2.6.x compatibility)
+}
+
+group = 'com.example.scc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
+}
