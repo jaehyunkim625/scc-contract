@@ -1,0 +1,17 @@
+{
+  "id" : "dedeb593-3491-4db5-aab6-3863abbed19c",
+  "request" : {
+    "urlPath" : "/sbcard/v1/cards/rabbit001",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"cardSeq\":\"0000943965\",\"cardNumber\":\"8505200770214969\",\"balance\":5000,\"customerId\":\"{{{request.path.[3]}}}\"},{\"cardSeq\":\"4139090566\",\"cardNumber\":\"2269046896700125\",\"balance\":100,\"customerId\":\"{{{request.path.[3]}}}\"}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template", "spring-cloud-contract" ]
+  },
+  "uuid" : "dedeb593-3491-4db5-aab6-3863abbed19c",
+  "priority" : 1
+}
