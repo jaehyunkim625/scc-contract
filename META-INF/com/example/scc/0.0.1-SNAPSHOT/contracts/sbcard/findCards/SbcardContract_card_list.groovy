@@ -1,4 +1,4 @@
-package contracts.sbcard.findCards
+package con
 
 import org.springframework.cloud.contract.spec.Contract
 
